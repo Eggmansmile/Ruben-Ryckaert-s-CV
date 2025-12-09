@@ -13,6 +13,7 @@ dist-ssr
 *.local
 .env
 certbot
+gemini.md
 
 # Editor directories and files
 .vscode/*
