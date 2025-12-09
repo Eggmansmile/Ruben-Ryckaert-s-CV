@@ -7,23 +7,23 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: "Paper Airplane Machine",
-      description: "An engineering project for IB 2 Industrial Engineering. Designed and built a machine capable of folding paper airplanes automatically.",
-      tags: ["Engineering", "Mechanism Design", "Prototyping"],
-      image: "/images/paper-airplane.jpeg", // Fixed extension
+      description: "An IB2 Industrial Engineering project. Designed and built a fully functional machine capable of folding paper airplanes automatically.",
+      tags: ["Mechanism Design", "Prototyping", "Engineering"],
+      image: "/images/paper-airplane.jpeg",
       link: "#"
     },
     {
       id: 2,
       title: "Stock Management App",
-      description: "A React-based application for managing inventory. Features include database integration and a user-friendly interface.",
-      tags: ["React", "Database", "JavaScript"],
-      image: "/images/stock-app.png", // Fixed extension
+      description: "A React-based application for managing inventory with a database backend. Deployed using Docker containers.",
+      tags: ["React", "Database", "Docker", "JavaScript"],
+      image: "/images/stock-app.png",
       link: "#"
     },
     {
       id: 3,
       title: "Bridge & Circuit Design",
-      description: "Projects for IB 1 Industrial Engineering. Involved complex electrical circuit calculations and structural bridge design.",
+      description: "Complex IB1 Industrial Engineering projects involving detailed electrical circuit calculations and structural bridge design/analysis.",
       tags: ["Circuit Design", "Structural Analysis", "Physics"],
       image: "/images/circuit-design.jpg",
       link: "#"
@@ -31,9 +31,9 @@ const Projects: React.FC = () => {
     {
       id: 4,
       title: "Oxfam HDC Design",
-      description: "Created graphic designs for Oxfam HDC, contributing to their visual identity and communication materials.",
+      description: "Served as a Graphic Designer for Oxfam HDC, creating visual identity assets and communication materials.",
       tags: ["Graphic Design", "Communication", "Creative"],
-      image: "/images/oxfam-design.png", // Fixed extension
+      image: "/images/oxfam-design.png",
       link: "#"
     }
   ];
@@ -60,9 +60,8 @@ const Projects: React.FC = () => {
                    alt={project.title} 
                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                    onError={(e) => {
-                     // Fallback if image missing - show a colored box with text
                      e.currentTarget.style.display = 'none';
-                     e.currentTarget.parentElement?.classList.add('flex', 'items-center', 'justify-center', 'text-slate-400');
+                     e.currentTarget.parentElement?.classList.add('flex', 'items-center', 'justify-center', 'text-slate-400', 'bg-slate-100', 'dark:bg-slate-800');
                      if(e.currentTarget.parentElement) e.currentTarget.parentElement.innerText = 'Image not found';
                    }}
                  />

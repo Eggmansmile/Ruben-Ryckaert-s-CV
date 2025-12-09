@@ -33,7 +33,7 @@ const About: React.FC = () => {
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed transition-colors">
             I am a highly motivated student currently in my 2nd year of the Bachelor in Industrial Sciences at KU Leuven (Groep T). 
-            Beyond my studies, I am actively involved as a volunteer at Maakleerplek where I manage inventory, and I play competitive badminton. 
+            Beyond my studies, I am actively involved as a volunteer at Maakleerplek where I manage inventory, and I play competitive badminton with Dijlevallei. 
             I combine technical engineering skills with creativity and software development expertise.
           </p>
         </div>

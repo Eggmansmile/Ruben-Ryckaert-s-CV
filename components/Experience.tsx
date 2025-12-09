@@ -11,7 +11,7 @@ const Experience: React.FC = () => {
       period: "2024 - 2028 (Expected)",
       description: [
         "Specializing in Industrial Engineering.",
-        "Focus on mechanics, electronics, and design."
+        "Focus on mechanics, electronics, and design projects."
       ]
     },
     {
@@ -21,37 +21,37 @@ const Experience: React.FC = () => {
       period: "Ongoing",
       description: [
         "Managing inventory and equipment organization.",
-        "Assisting in a creative makerspace environment."
+        "Assisting in a creative makerspace environment as a dedicated volunteer."
       ]
     },
     {
       id: 3,
-      role: "Student Council Member",
-      company: "Leerlingenraad HDC",
+      role: "Communication & Designer",
+      company: "Student Council HDC",
       period: "4 Years",
       description: [
-        "Responsible for Communication and Design.",
+        "Responsible for graphic design and internal/external communication.",
         "Organized school events and represented student interests."
       ]
     },
     {
       id: 4,
-      role: "Programmer / Student",
+      role: "Programmer",
       company: "Codefever",
       period: "Past",
       description: [
-        "Developed skills in Python, Java, HTML, CSS, JavaScript.",
-        "Worked with React, Docker, and Godot Game Engine."
+        "Gained programming expertise in Python, Java, HTML, CSS, and JavaScript.",
+        "Developed projects using the Godot Game Engine."
       ]
     },
     {
       id: 5,
       role: "Secondary Education",
-      company: "Midden Jury",
+      company: "Central Jury (Middenjury)",
       period: "Graduated 2024",
       description: [
-        "Math-Sciences (Wiskunde-wetenschappen).",
-        "Obtained ASO Diploma."
+        "Mathematics-Sciences (Wiskunde-wetenschappen).",
+        "Obtained ASO Diploma of Secondary Education."
       ]
     }
   ];

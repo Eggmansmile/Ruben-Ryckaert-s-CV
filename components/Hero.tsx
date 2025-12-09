@@ -17,11 +17,11 @@ const Hero: React.FC = () => {
               {CONFIG.title}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight mb-6 transition-colors">
-              Hi, I'm {CONFIG.name}. <br />
-              <span className="text-blue-600 dark:text-blue-400">Future Engineer & Maker</span>
+              Hi, I'm <span className="block text-blue-600 dark:text-blue-400">{CONFIG.name}.</span>
+              <span className="text-3xl md:text-4xl lg:text-5xl text-slate-700 dark:text-slate-300">Future Engineer & Maker</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed transition-colors">
-              I am a motivated 2nd-year Industrial Engineering student at KU Leuven (Groep T). 
+              I am a highly motivated 2nd-year Industrial Engineering student at KU Leuven (Groep T). 
               Passionate about 3D design, electronics, and full-stack development.
             </p>
             
@@ -56,12 +56,12 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-blue-600 rounded-2xl rotate-6 opacity-20 dark:opacity-30"></div>
               <div className="absolute inset-0 bg-slate-900 rounded-2xl -rotate-3 overflow-hidden shadow-2xl">
                  <img 
-                  src="/images/profile.jpg" 
+                  src="/images/profile.jpg"
                   alt={CONFIG.name} 
                   className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500"
                   onError={(e) => {
-                    // Fallback to placeholder if image not found
-                    e.currentTarget.src = "https://picsum.photos/seed/ruben/800/800";
+                    // Fallback to Unsplash if local image is missing
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800";
                   }}
                 />
               </div>
