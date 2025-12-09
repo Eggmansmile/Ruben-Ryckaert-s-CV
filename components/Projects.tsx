@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ExternalLink, X, ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
 import { Project } from '../types';
+import { getAssetUrl } from '../config';
 
 const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -121,7 +122,7 @@ const Projects: React.FC = () => {
               >
                 <div className="absolute inset-0 bg-blue-600/10 dark:bg-blue-900/10 z-10 group-hover:bg-transparent transition-colors duration-300"></div>
                 <img 
-                   src={project.image} 
+                   src={getAssetUrl(project.image)} 
                    alt={project.title} 
                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                    onError={(e) => {
@@ -215,7 +216,7 @@ const Projects: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
           >
              <img 
-               src={(selectedProject.gallery || [selectedProject.image])[currentImageIndex]} 
+               src={getAssetUrl((selectedProject.gallery || [selectedProject.image])[currentImageIndex])} 
                alt={selectedProject.title} 
                className="max-w-full max-h-[85vh] object-contain shadow-2xl rounded-sm"
                onError={(e) => {

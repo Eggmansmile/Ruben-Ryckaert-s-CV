@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Download } from 'lucide-react';
-import { CONFIG } from '../config';
+import { CONFIG, getAssetUrl } from '../config';
 
 const Hero: React.FC = () => {
   return (
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
-                href="/resume.pdf" 
+                href={getAssetUrl("/resume.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-all flex items-center justify-center gap-2"
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-blue-600 rounded-2xl rotate-6 opacity-20 dark:opacity-30"></div>
               <div className="absolute inset-0 bg-slate-900 rounded-2xl -rotate-3 overflow-hidden shadow-2xl">
                  <img 
-                  src="/images/profile.png"
+                  src={getAssetUrl("/images/profile.png")}
                   alt={CONFIG.name} 
                   className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500"
                   onError={(e) => {
