@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
 
     try {
       // Update this with your server IP or domain
-      const backendUrl = 'http://your-server-ip:3001/api/send-email';
+      const backendUrl = `${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/send-email`;
       // Or use your domain: 'https://your-domain.com/api/send-email'
 
       const response = await fetch(backendUrl, {
