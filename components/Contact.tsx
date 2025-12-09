@@ -28,13 +28,11 @@ const Contact: React.FC = () => {
     setSuccess(false);
 
     try {
-      // For local development: use localhost:3001
-      // For production: use Vercel deployment
-      const apiUrl = process.env.NODE_ENV === 'production' 
-        ? 'https://your-vercel-domain.vercel.app/api/send-email'
-        : 'http://localhost:3001/api/send-email';
+      // Update this with your server IP or domain
+      const backendUrl = 'http://your-server-ip:3001/api/send-email';
+      // Or use your domain: 'https://your-domain.com/api/send-email'
 
-      const response = await fetch('/api/send-email', {
+      const response = await fetch(backendUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
