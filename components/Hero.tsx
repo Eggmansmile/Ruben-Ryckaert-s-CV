@@ -56,9 +56,13 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-blue-600 rounded-2xl rotate-6 opacity-20 dark:opacity-30"></div>
               <div className="absolute inset-0 bg-slate-900 rounded-2xl -rotate-3 overflow-hidden shadow-2xl">
                  <img 
-                  src="https://picsum.photos/seed/ruben/800/800" 
+                  src="/images/profile.jpg" 
                   alt={CONFIG.name} 
                   className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    // Fallback to placeholder if image not found
+                    e.currentTarget.src = "https://picsum.photos/seed/ruben/800/800";
+                  }}
                 />
               </div>
             </div>

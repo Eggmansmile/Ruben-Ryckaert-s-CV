@@ -2,10 +2,9 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  technologies: string[];
-  imageUrl: string;
-  githubUrl: string;
-  liveUrl: string;
+  tags: string[];
+  image: string;
+  link: string;
 }
 
 export interface Experience {

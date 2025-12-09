@@ -1,14 +1,15 @@
 import React from 'react';
-import { ExternalLink, Zap, PenTool, Database, Box } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { Project } from '../types';
 
 const Projects: React.FC = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: "Paper Airplane Machine",
       description: "An engineering project for IB 2 Industrial Engineering. Designed and built a machine capable of folding paper airplanes automatically.",
       tags: ["Engineering", "Mechanism Design", "Prototyping"],
-      icon: <Zap size={24} />,
+      image: "/images/paper-airplane.jpeg", // Fixed extension
       link: "#"
     },
     {
@@ -16,7 +17,7 @@ const Projects: React.FC = () => {
       title: "Stock Management App",
       description: "A React-based application for managing inventory. Features include database integration and a user-friendly interface.",
       tags: ["React", "Database", "JavaScript"],
-      icon: <Database size={24} />,
+      image: "/images/stock-app.png", // Fixed extension
       link: "#"
     },
     {
@@ -24,7 +25,7 @@ const Projects: React.FC = () => {
       title: "Bridge & Circuit Design",
       description: "Projects for IB 1 Industrial Engineering. Involved complex electrical circuit calculations and structural bridge design.",
       tags: ["Circuit Design", "Structural Analysis", "Physics"],
-      icon: <Box size={24} />,
+      image: "/images/circuit-design.jpg",
       link: "#"
     },
     {
@@ -32,7 +33,7 @@ const Projects: React.FC = () => {
       title: "Oxfam HDC Design",
       description: "Created graphic designs for Oxfam HDC, contributing to their visual identity and communication materials.",
       tags: ["Graphic Design", "Communication", "Creative"],
-      icon: <PenTool size={24} />,
+      image: "/images/oxfam-design.png", // Fixed extension
       link: "#"
     }
   ];
@@ -49,38 +50,52 @@ const Projects: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="bg-white dark:bg-slate-800 rounded-xl p-8 border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300 group flex flex-col">
-              <div className="flex justify-between items-start mb-6">
-                <div className="p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                  {project.icon}
-                </div>
+            <div key={project.id} className="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300 group flex flex-col overflow-hidden">
+              
+              {/* Image Container */}
+              <div className="relative h-48 sm:h-64 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                <div className="absolute inset-0 bg-blue-600/10 dark:bg-blue-900/10 z-10 group-hover:bg-transparent transition-colors duration-300"></div>
+                <img 
+                   src={project.image} 
+                   alt={project.title} 
+                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                   onError={(e) => {
+                     // Fallback if image missing - show a colored box with text
+                     e.currentTarget.style.display = 'none';
+                     e.currentTarget.parentElement?.classList.add('flex', 'items-center', 'justify-center', 'text-slate-400');
+                     if(e.currentTarget.parentElement) e.currentTarget.parentElement.innerText = 'Image not found';
+                   }}
+                 />
                 <a 
                   href={project.link} 
-                  className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-1" 
+                  className="absolute top-4 right-4 z-20 p-2 bg-white/90 dark:bg-slate-900/90 rounded-full text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors shadow-sm opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300" 
                   aria-label={`View ${project.title}`}
                 >
                   <ExternalLink size={20} />
                 </a>
               </div>
               
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                {project.title}
-              </h3>
-              
-              <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed transition-colors flex-grow">
-                {project.description}
-              </p>
-              
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-700/50 mt-auto">
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, idx) => (
-                    <span 
-                      key={idx} 
-                      className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 transition-colors hover:border-blue-300 dark:hover:border-blue-500"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              {/* Content */}
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  {project.title}
+                </h3>
+                
+                <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed transition-colors flex-grow">
+                  {project.description}
+                </p>
+                
+                <div className="pt-4 border-t border-slate-100 dark:border-slate-700/50 mt-auto">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, idx) => (
+                      <span 
+                        key={idx} 
+                        className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 transition-colors hover:border-blue-300 dark:hover:border-blue-500"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

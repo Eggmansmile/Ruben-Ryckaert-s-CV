@@ -91,7 +91,15 @@ Specific data is located within the component files in `src/components/`.
     -   Edit **`src/components/About.tsx`** to update the bio text and the `highlights` array.
 
 ### 3. Images & Resume
--   **Images**: Place your images in a `public/images/` folder (or `src/assets/`) and update `src` attributes in components.
+-   **Images**: Create a folder `public/images/` and add the following files to match the code:
+    -   `profile.jpg` (Hero section)
+    -   `paper-airplane.jpeg`
+    -   `stock-app.png`
+    -   `circuit-design.jpg`
+    -   `oxfam-design.png`
+    
+    *If you name your files differently, make sure to update the paths in `Hero.tsx` and `Projects.tsx`.*
+
 -   **Resume**: Place your resume PDF file in the `public/` folder and name it **`resume.pdf`**. The "Download CV" button in the Hero section is configured to link to `/resume.pdf`.
 
 ```tsx
