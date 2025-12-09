@@ -1,6 +1,7 @@
 {
   "name": "ruben-cv-backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "Backend for Ruben Ryckaert's CV/Portfolio",
   "main": "server.js",
   "scripts": {
