@@ -2,115 +2,119 @@
 
 A modern, responsive, and fully customizable portfolio website built with **React**, **TypeScript**, and **Tailwind CSS**. Designed to showcase engineering projects, skills, and professional experience with a clean and professional aesthetic.
 
+This project includes a **fully dockerized** setup with a custom **Node.js/Express backend** for handling contact form submissions securely via SMTP, all served through an **Nginx** reverse proxy with **HTTPS** support.
+
 ## 🚀 Features
 
-- **Responsive Design**: Looks great on mobile, tablet, and desktop.
-- **Modern UI/UX**: Smooth scrolling, glassmorphism effects, and hover animations.
+- **Full-Stack Architecture**: React Frontend + Node.js/Express Backend.
+- **Dockerized Deployment**: Entire stack (Frontend, Backend, Nginx) runs in orchestrated Docker containers.
+- **Secure Communication**:
+    - Nginx Reverse Proxy managing traffic.
+    - HTTPS enabled with auto-generated self-signed certificates (production-ready structure).
+    - HSTS (HTTP Strict Transport Security) header implementation.
+- **Functional Contact Form**: Sends real emails using Nodemailer and SMTP (Gmail, etc.), with auto-reply functionality.
+- **Responsive Design**: Mobile-first approach looking great on all devices.
+- **Modern UI/UX**: Smooth scrolling, glassmorphism effects, dark mode support, and hover animations.
 - **Sectioned Layout**:
-  - **Hero**: Impactful introduction with call-to-action buttons (Projects, Resume, Contact).
+  - **Hero**: Impactful introduction with call-to-action buttons.
   - **About**: Professional bio and key highlights.
   - **Skills**: Categorized view of technical and soft skills.
   - **Experience**: Timeline-style display of education and work history.
   - **Projects**: Card grid showcasing featured work with tags and links.
-  - **Contact**: Functional layout for contact information and a message form.
-- **Type-Safe**: Built with TypeScript for reliability and easier refactoring.
+  - **Contact**: Integrated form connecting to the backend API.
 
 ## 🛠️ Tech Stack
 
+### Frontend
 - **Framework**: React 18+
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS (via CDN for simplicity or PostCSS for production)
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
 - **Icons**: Lucide React
+
+### Backend
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **Email**: Nodemailer (SMTP)
+- **Security**: CORS, Environment Variables
+
+### DevOps & Infrastructure
+- **Containerization**: Docker & Docker Compose
+- **Web Server / Proxy**: Nginx (Alpine Linux)
+- **SSL**: OpenSSL (Self-signed for dev/testing, ready for Certbot)
 
 ## 📦 Getting Started
 
 ### Prerequisites
 
-- Node.js (version 16 or higher)
-- npm or yarn
+- Docker & Docker Compose
+- Node.js (for local dev without Docker)
 
-### Installation
+### 🐳 Docker Deployment (Recommended)
 
-1.  **Clone the repository** (or download the files):
+1.  **Clone the repository**:
     ```bash
     git clone <repository-url>
-    cd portfolio
+    cd Ruben-Ryckaert-s-CV
     ```
 
-2.  **Install dependencies**:
+2.  **Configure Environment Variables**:
+    Create a `.env` file in the root directory (copy from `.env.example`):
+    ```env
+    # SMTP Configuration (for contact form)
+    SMTP_SERVICE=gmail
+    SMTP_USER=your.email@gmail.com
+    SMTP_PASSWORD=your_app_password
+    RECIPIENT_EMAIL=your.email@gmail.com
+
+    # Server
+    PORT=3001
+    NODE_ENV=production
+
+    # Frontend
+    # Ensure this matches your server IP/Domain and mapped port (e.g., :82)
+    VITE_API_URL=https://your-server-ip:82
+    ```
+
+3.  **Build and Run**:
+    ```bash
+    docker-compose up -d --build
+    ```
+
+4.  **Access the Site**:
+    - Frontend: `https://localhost:82` (or your server IP)
+    - Backend API: Internal only (proxied via Nginx)
+
+### Local Development (Manual)
+
+1.  **Install Frontend Dependencies**:
     ```bash
     npm install
-    ```
-
-3.  **Run the development server**:
-    ```bash
     npm run dev
     ```
-    The site will be available at `http://localhost:3000` (or the network IP shown in the terminal).
 
-4.  **Build for production**:
+2.  **Install Backend Dependencies**:
     ```bash
-    npm run build
+    cd backend
+    npm install
+    node server.mjs
     ```
 
 ## ⚙️ Customization Guide
 
-This project is structured to make customization easy. Most content is separated from logic.
+### 1. General Information
+Open **`config.ts`**. This file acts as the central configuration for the site. Update your name, title, social links, and contact info here.
 
-### 1. General Information (Name, Socials, Contact)
-Open **`src/config.ts`**. This file acts as the central configuration for the site.
-Change the values here to update your name, email, phone number, and social media links globally.
-
-```typescript
-// src/config.ts
-export const CONFIG = {
-  name: "Your Name",
-  title: "Your Professional Title",
-  email: "your.email@example.com",
-  // ...
-};
-```
-
-### 2. Updating Content Sections
-
-Specific data is located within the component files in `src/components/`.
-
--   **Experience & Education**:
-    -   Edit **`src/components/Experience.tsx`**.
-    -   Modify the `experiences` array. You can add, remove, or reorder items.
-
--   **Projects**:
-    -   Edit **`src/components/Projects.tsx`**.
-    -   Update the `projects` array with your actual projects, descriptions, and links.
-
--   **Skills**:
-    -   Edit **`src/components/Skills.tsx`**.
-    -   Update the `skillsData` array to change categories or skill lists.
-
--   **About Me**:
-    -   Edit **`src/components/About.tsx`** to update the bio text and the `highlights` array.
+### 2. Updating Content
+Content is located in `components/`:
+- **Experience.tsx**: Work/Education history.
+- **Projects.tsx**: Project showcase.
+- **Skills.tsx**: Technical abilities.
+- **About.tsx**: Bio text.
 
 ### 3. Images & Resume
--   **Images**: Create a folder `public/images/` and add the following files to match the code:
-    -   `profile.jpg` (Hero section)
-    -   `paper-airplane.jpeg`
-    -   `stock-app.png`
-    -   `circuit-design.jpg`
-    -   `oxfam-design.png`
-    
-    *If you name your files differently, make sure to update the paths in `Hero.tsx` and `Projects.tsx`.*
-
--   **Resume**: Place your resume PDF file in the `public/` folder and name it **`resume.pdf`**. The "Download CV" button in the Hero section is configured to link to `/resume.pdf`.
-
-```tsx
-// Example in src/components/Hero.tsx
-<a href="/resume.pdf" ... >Download CV</a>
-```
-
-### 4. Styling & Colors
-The project uses Tailwind CSS.
--   **Colors**: The primary blue color (`blue-600`) and slate scale are used throughout. To change the theme, you can find-and-replace `blue-600` with your preferred Tailwind color (e.g., `emerald-600`, `indigo-600`).
--   **Fonts**: The font is set to "Inter" in `index.html`. You can change the Google Fonts link there to use a different typeface.
+- Place images in `public/images/`.
+- Place your resume PDF at `public/resume.pdf`.
 
 ## 📄 License
 
