@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
 
     try {
       // Update this with your server IP or domain
-      const backendUrl = `https://75.119.131.242:82/api/send-email`;
+      const backendUrl = `https://rubenryckaertcv.duckdns.org:82/api/send-email`;
       // Or use your domain: 'https://your-domain.com/api/send-email'
 
       const response = await fetch(backendUrl, {
