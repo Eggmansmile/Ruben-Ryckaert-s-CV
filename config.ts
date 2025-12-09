@@ -6,8 +6,8 @@ export const CONFIG = {
   website: "www.linkedin.com/in/ruben-ryckaert", // Placeholder updated to a likely professional link or generic
   location: "Leuven, Belgium",
   social: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
+    github: "https://github.com/Eggmansmile",
+    linkedin: "https://www.linkedin.com/in/ruben-ryckaert-2b4717297/",
   },
   meta: {
     description: "Portfolio of Ruben Aaron Ryckaert, an Industrial Engineering student and developer."
