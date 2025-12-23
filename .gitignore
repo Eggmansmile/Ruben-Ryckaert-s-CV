@@ -1,3 +1,10 @@
+# Environment variables (NEVER commit credentials)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
 # Logs
 logs
 *.log
@@ -7,14 +14,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+
+# Build
 dist
 dist-ssr
 *.local
-.env
-gemini.md
 
-# Editor directories and files
+# IDE
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -24,3 +32,41 @@ gemini.md
 *.njsproj
 *.sln
 *.sw?
+
+# PM2
+Ecosystem.config.js
+.pm2
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+*~
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# SSL Certificates (if any)
+*.pem
+*.key
+*.crt
+
+# API Keys and Secrets
+.env
+.env.local
+secrets.json
