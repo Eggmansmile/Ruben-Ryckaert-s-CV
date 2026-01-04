@@ -9,6 +9,11 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+
+# Fix for npm optional dependencies bug
+RUN npm install @rollup/rollup-linux-x64-musl
+
+
 # Copy the rest of the application code
 COPY . .
 
