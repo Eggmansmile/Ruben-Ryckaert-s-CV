@@ -26,7 +26,7 @@ RUN npm install --prefix frontend
 # Build the application
 # We need to set the VITE_API_URL environment variable during the build
 ARG VITE_API_URL
-ENV VITE_API_URL=https://75.119.131.242:82
+ENV VITE_API_URL=${VITE_API_URL}
 RUN npm run build
 
 # Stage 2: Serve the application with Nginx
