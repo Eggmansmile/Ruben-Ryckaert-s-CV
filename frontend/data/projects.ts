@@ -70,9 +70,9 @@ export const PROJECTS_DATA: Project[] = [
     link: "#"
   },
   {
-    id: 7
-    title: "Maakleekplek TV-collage"
-    description: "A TV collage created for HTL(high tech lab) showcasing events and activities."
+    id: 7,
+    title: "Maakleekplek TV-collage",
+    description: "A TV collage created for HTL(high tech lab) showcasing events and activities.",
     tags: ["Graphic Design", "Communication", "Creative"],
     image: "/images/maakleekplek-tv-collage.png",
     gallery: [
