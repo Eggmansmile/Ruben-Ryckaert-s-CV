@@ -8,15 +8,18 @@ export interface Project {
   link: string;
 }
 
-export interface Experience {
-  id: number;
+export interface ExperienceEntry {
   role: string;
   company: string;
+  type: string;
   period: string;
-  description: string[];
+  location: string;
+  summary: string;
 }
 
 export interface SkillCategory {
   title: string;
+  icon: string; // lucide icon name
+  color: string; // tailwind text color class
   skills: string[];
 }

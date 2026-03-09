@@ -54,7 +54,7 @@ export const githubService = {
       return {
         login: USERNAME,
         name: "Ruben Ryckaert",
-        bio: "I'm a 20 year old uni student trying to better understand IT",
+        bio: "uni student trying to better understand IT",
         location: "Leuven",
         blog: "https://75.119.131.242:82/",
         avatar_url: "https://avatars.githubusercontent.com/u/200574456?v=4",

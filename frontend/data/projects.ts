@@ -9,8 +9,8 @@ export const PROJECTS_DATA: Project[] = [
     image: "/images/paper-airplane.jpeg",
     gallery: [
       "/images/paper-airplane.jpeg",
-      "/images/paper-airplane1.jpeg",
-      "/images/paper-airplane2.jpeg"
+      "/images/paper-airplane1.jpg",
+      "/images/paper-airplane2.jpg"
     ],
     link: "#"
   },
@@ -19,24 +19,22 @@ export const PROJECTS_DATA: Project[] = [
     title: "Stock Management App",
     description: "A React-based application for managing inventory with a database backend. Deployed using Docker containers.",
     tags: ["React", "Database", "Docker", "JavaScript"],
-    image: "/images/stock-app.png",
+    image: "/images/stock-management.png",
     gallery: [
-      "/images/stock-app.png",
-      "/images/stock-app1.png",
-      "/images/stock-app2.png"
+      "/images/stock-management.png"
     ],
     link: "#"
   },
   {
     id: 3,
-    title: "Bridge & Circuit Design",
+    title: "Engineering experience 1",
     description: "Complex IB1 Industrial Engineering projects involving detailed electrical circuit calculations and structural bridge design/analysis.",
     tags: ["Circuit Design", "Structural Analysis", "Physics"],
     image: "/images/circuit-design.jpg",
     gallery: [
       "/images/circuit-design.jpg",
-      "/images/circuit-design1.jpg",
-      "/images/circuit-design2.jpg"
+      "/images/20250516_181922.jpg",
+      "/images/IMG_6843.jpg"
     ],
     link: "#"
   },
@@ -47,9 +45,7 @@ export const PROJECTS_DATA: Project[] = [
     tags: ["Graphic Design", "Communication", "Creative"],
     image: "/images/oxfam-design.png",
     gallery: [
-      "/images/oxfam-design.png",
-      "/images/oxfam-design1.png",
-      "/images/oxfam-design2.png"
+      "/images/oxfam-design.png"
     ],
     link: "#"
   },
@@ -58,11 +54,8 @@ export const PROJECTS_DATA: Project[] = [
     title: "DIY Car",
     description: "A personal project involving the design and assembly of a small, functional car using 3D printing and electronic components.",
     tags: ["Electronics", "3D Design", "Engineering", "Lasercutting"],
-    image: "/images/diy-car.png",
+    image: "",
     gallery: [
-      "/images/diy-car.png",
-      "/images/diy-car1.png",
-      "/images/diy-car2.png"
     ],
     link: "#"
   },
@@ -71,11 +64,19 @@ export const PROJECTS_DATA: Project[] = [
     title: "Mechanical DIY gun",
     description: "A personal project involving the design and assembly of a small, functional mechanical gun using 3D printing and electronic components.",
     tags: ["Electronics", "3D Design", "Engineering", "3D Printing"],
-    image: "/images/diy-gun.png",
+    image: "",
     gallery: [
-      "/images/diy-gun.png",
-      "/images/diy-gun1.png",
-      "/images/diy-gun2.png"
+    ],
+    link: "#"
+  },
+  {
+    id: 7
+    title: "Maakleekplek TV-collage"
+    description: "A TV collage created for HTL(high tech lab) showcasing events and activities."
+    tags: ["Graphic Design", "Communication", "Creative"],
+    image: "/images/maakleekplek-tv-collage.png",
+    gallery: [
+      "/images/maakleekplek-tv-collage.png"
     ],
     link: "#"
   }
