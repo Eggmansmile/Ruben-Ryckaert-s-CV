@@ -34,8 +34,7 @@ const Contact: React.FC = () => {
     setErrorMessage('');
 
     try {
-      const backendUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/send-email';
-      const response = await fetch(backendUrl, {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

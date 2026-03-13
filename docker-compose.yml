@@ -15,8 +15,6 @@ services:
   nginx:
     build:
       context: .
-      args:
-        VITE_API_URL: ${VITE_API_URL}
     ports:
       - "3002:80"
     volumes:
