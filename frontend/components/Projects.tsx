@@ -178,7 +178,9 @@ const Projects: React.FC = () => {
                 </div>
 
                 <a 
-                  href={project.link} 
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
                   className="absolute top-4 right-4 z-40 p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors opacity-0 group-hover:opacity-100"
                 >

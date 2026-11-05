@@ -104,7 +104,7 @@ export const EXPERIENCES: ExperienceEntry[] = [
     type: "Volunteering",
     period: "2025 - Present",
     location: "Leuven",
-    summary: "Managing makerspace inventory and assisting with equipment maintenance.",
+    summary: "Built and run the makerspace stock system (InvenTree, web app, self-service kiosk) and help with equipment maintenance.",
   },
 ];
 

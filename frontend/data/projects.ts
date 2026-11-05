@@ -16,14 +16,14 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     id: 2,
-    title: "Stock Management App",
-    description: "A React-based application for managing inventory with a database backend. Deployed using Docker containers.",
-    tags: ["React", "Database", "Docker", "JavaScript"],
+    title: "Maakleerplek Stock System",
+    description: "Stock and checkout system for the Maakleerplek makerspace, built and maintained as a volunteer for 1.5 years. A React + TypeScript web app on top of InvenTree handles inventory, purchase orders, analytics and laser-cutter sessions. A self-service kiosk (Raspberry Pi with a touch screen and barcode scanner, Rust + Slint) lets members scan items and pay with a QR code, while a TV shows live sales and stock. Everything runs in Docker with automatic deploys.",
+    tags: ["React", "TypeScript", "InvenTree", "Rust", "Raspberry Pi", "Docker"],
     image: "/images/stock-management.png",
     gallery: [
       "/images/stock-management.png"
     ],
-    link: "#"
+    link: "https://github.com/maakleerplek/Stock-management-frontend"
   },
   {
     id: 3,
@@ -51,11 +51,15 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     id: 5,
-    title: "DIY Car",
-    description: "A personal project involving the design and assembly of a small, functional car using 3D printing and electronic components.",
-    tags: ["Electronics", "3D Design", "Engineering", "Lasercutting"],
-    image: "",
+    title: "RC Car",
+    description: "A 3D-printed RC car designed from scratch: ESP32 controller, TB6612 motor driver, two rear motors with a 9:1 gear in the rim, servo steering and a 2S battery. The CAD (build123d) and the KiCad schematic and PCB are generated from Python scripts, and the custom PCB was manufactured by PCBWay.",
+    tags: ["Electronics", "PCB Design", "3D Design", "ESP32", "Python"],
+    image: "/images/rc-car-render.jpg",
     gallery: [
+      "/images/rc-car-render.jpg",
+      "/images/rc-car-pcb-3d.jpg",
+      "/images/rc-car-pcb-top.jpg",
+      "/images/rc-car-drawing.jpg"
     ],
     link: "#"
   },
