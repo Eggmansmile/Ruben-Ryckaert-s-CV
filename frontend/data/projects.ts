@@ -19,8 +19,10 @@ export const PROJECTS_DATA: Project[] = [
     title: "Maakleerplek Stock System",
     description: "Stock and checkout system for the Maakleerplek makerspace, built and maintained as a volunteer for 1.5 years. A React + TypeScript web app on top of InvenTree handles inventory, purchase orders, analytics and laser-cutter sessions. A self-service kiosk (Raspberry Pi with a touch screen and barcode scanner, Rust + Slint) lets members scan items and pay with a QR code, while a TV shows live sales and stock. Everything runs in Docker with automatic deploys.",
     tags: ["React", "TypeScript", "InvenTree", "Rust", "Raspberry Pi", "Docker"],
-    image: "/images/stock-management.png",
+    image: "/images/maakleerplek-kiosk.jpg",
     gallery: [
+      "/images/maakleerplek-kiosk.jpg",
+      "/images/maakleerplek-pi.jpg",
       "/images/stock-management.png"
     ],
     link: "https://github.com/maakleerplek/Stock-management-frontend"
