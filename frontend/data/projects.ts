@@ -75,16 +75,5 @@ export const PROJECTS_DATA: Project[] = [
     gallery: [
     ],
     link: "#"
-  },
-  {
-    id: 7,
-    title: "Maakleekplek TV-collage",
-    description: "A TV collage created for HTL(high tech lab) showcasing events and activities.",
-    tags: ["Graphic Design", "Communication", "Creative"],
-    image: "/images/maakleekplek-tv-collage.png",
-    gallery: [
-      "/images/maakleekplek-tv-collage.png"
-    ],
-    link: "#"
   }
 ];

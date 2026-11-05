@@ -72,8 +72,30 @@ export const EXPERIENCES: ExperienceEntry[] = [
     location: "Leuven",
     summary: "Runs GT Vault, the self-hosted study platform for Group T students: file cloud, wiki and single sign-on (OpenCloud, DokuWiki, Keycloak) on a home server behind a Cloudflare tunnel.",
   },
-
-
+  {
+    role: "Volunteer & Inventory Manager",
+    company: "Maakleerplek",
+    type: "Volunteering",
+    period: "2025 - Present",
+    location: "Leuven",
+    summary: "Built and run the makerspace stock system (InvenTree, web app, self-service kiosk) and help with equipment maintenance.",
+  },
+  {
+    role: "Industrial Engineering Student - Electromechanics",
+    company: "KU Leuven",
+    type: "Education",
+    period: "2024 - Present",
+    location: "Leuven",
+    summary: "Specializing in mechanics and electronics. 3rd Year Bachelor.",
+  },
+  {
+    role: "ASO Sciences-Math",
+    company: "Middenjury",
+    type: "Education",
+    period: "Graduated 2024",
+    location: "Belgium",
+    summary: "Secondary education diploma via Central Jury.",
+  },
   {
     role: "Advisor",
     company: "Student Council HDC",
@@ -89,30 +111,6 @@ export const EXPERIENCES: ExperienceEntry[] = [
     period: "2 Years",
     location: "High School",
     summary: "Created promotional material for the student-run Oxfam shop at school.",
-  },
-  {
-    role: "ASO Sciences-Math",
-    company: "Middenjury",
-    type: "Education",
-    period: "Graduated 2024",
-    location: "Belgium",
-    summary: "Secondary education diploma via Central Jury.",
-  },
-  {
-    role: "Industrial Engineering Student - Electromechanics",
-    company: "KU Leuven",
-    type: "Education",
-    period: "2024 - Present",
-    location: "Leuven",
-    summary: "Specializing in mechanics and electronics. 3rd Year Bachelor.",
-  },
-  {
-    role: "Volunteer & Inventory Manager",
-    company: "Maakleerplek",
-    type: "Volunteering",
-    period: "2025 - Present",
-    location: "Leuven",
-    summary: "Built and run the makerspace stock system (InvenTree, web app, self-service kiosk) and help with equipment maintenance.",
   },
 ];
 
