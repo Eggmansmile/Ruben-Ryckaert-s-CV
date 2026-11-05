@@ -9,10 +9,10 @@ export const CONFIG = {
   birthDate: "2005-02-04",
 
   /** Short bio shown in the Hero section. Use {age} as a placeholder — it gets replaced at runtime. */
-  bio: "I am a <strong class=\"text-slate-900 dark:text-white font-semibold\">{age}-year-old 2nd-year Industrial Engineering</strong> student at KU Leuven, passionate about bridging the gap between hardware and software.",
+  bio: "I am a <strong class=\"text-slate-900 dark:text-white font-semibold\">{age}-year-old 3rd-year Industrial Engineering</strong> student at KU Leuven, passionate about bridging the gap between hardware and software.",
 
   /** Academic year label shown as a badge in Hero */
-  yearLabel: "2nd Year Bachelor",
+  yearLabel: "3rd Year Bachelor",
 
   email: "ruben.ryckaert89@gmail.com",
   phone: "+32 468 45 98 66",
@@ -104,7 +104,7 @@ export const EXPERIENCES: ExperienceEntry[] = [
     type: "Education",
     period: "2024 - Present",
     location: "Leuven",
-    summary: "Specializing in mechanics and electronics. 2nd Year Bachelor.",
+    summary: "Specializing in mechanics and electronics. 3rd Year Bachelor.",
   },
   {
     role: "Volunteer & Inventory Manager",
