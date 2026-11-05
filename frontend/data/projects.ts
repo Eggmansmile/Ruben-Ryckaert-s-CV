@@ -22,6 +22,7 @@ export const PROJECTS_DATA: Project[] = [
     image: "/images/maakleerplek-kiosk.jpg",
     gallery: [
       "/images/maakleerplek-kiosk.jpg",
+      "/images/maakleerplek-tv.jpg",
       "/images/maakleerplek-pi.jpg",
       "/images/stock-management.png"
     ],
