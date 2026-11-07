@@ -65,14 +65,6 @@ export const SKILLS: SkillCategory[] = [
 // Fields: role, company, type, period, location, summary
 export const EXPERIENCES: ExperienceEntry[] = [
   {
-    role: "Founder & Owner",
-    company: "GT Vault",
-    type: "Leadership",
-    period: "2026 - Present",
-    location: "Leuven",
-    summary: "Runs GT Vault, the self-hosted study platform for Group T students: file cloud, wiki and single sign-on (OpenCloud, DokuWiki, Keycloak) on a home server behind a Cloudflare tunnel.",
-  },
-  {
     role: "Volunteer & Inventory Manager",
     company: "Maakleerplek",
     type: "Volunteering",
