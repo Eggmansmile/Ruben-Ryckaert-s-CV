@@ -26,7 +26,7 @@ export const PROJECTS_DATA: Project[] = [
       "/images/maakleerplek-pi.jpg",
       "/images/stock-management.png"
     ],
-    link: "https://github.com/maakleerplek/Stock-management-frontend"
+    link: "https://github.com/maakleerplek/htl-stock"
   },
   {
     id: 3,
